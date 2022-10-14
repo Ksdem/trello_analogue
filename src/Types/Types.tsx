@@ -1,14 +1,15 @@
-export type ListItem = {
+export type IListItem = {
     id: number;
-    items: RowItemDto[];
+    title: string;
+    cards: ICardDto[];
 }
 
-export type RowItemDto = {
+export type ICardDto = {
     id: number;
     title: string;
 }
 
-export type RowItem = {
+export type ICard = {
     id: string;
     title: string;
     description: string;

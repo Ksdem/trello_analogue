@@ -1,0 +1,41 @@
+.list-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15px;
+
+  .list-item {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 1px solid red;
+    padding: 5px 15px;
+    flex: 0 0 300px;
+    // .list-item__title
+    &__title {
+      font-size: 1.2em;
+    }
+
+    // .list-item__cards
+    &__cards {
+      margin-top: 10px;
+    }
+
+    // .list-item__buttons
+    &__buttons {
+      margin-top: 10px;
+
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 15px;
+    }
+  }
+
+  .list-create-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    padding: 5px 15px;
+    flex: 0 0 300px;
+    user-select: none;
+  }
+}
