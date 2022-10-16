@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import ListWrapper from "./Components/Content/ListWrapper";
 import { createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
-
+import Card from "./Components/Content/Card";
 function App() {
     const router = createBrowserRouter([
         {
@@ -12,11 +12,10 @@ function App() {
             </div>,
             children: [
                 {path: '', element: <ListWrapper/>},
-                {path: '/edit/:listItemId', element: <div>Content123</div>},
-                {path: '/edit/:listItemId/:rowItemId', element: <div>Content1234</div>},
+                {path: '/edit/:listItemId/:rowItemId', element: <div><Card/></div>},
             ]
         },
-    ]);
+    ], {basename: process.env.PUBLIC_URL});
     return (
         <RouterProvider router={router}/>
     );

@@ -8,6 +8,7 @@ export type IListItemProps = {
     onDelete: () => void;
     onAddCard: () => void;
     onTitleChange: (text: string) => void;
+
 }
 
 export const ListItem = ({list, onDelete, onAddCard, onTitleChange}: IListItemProps) => {
